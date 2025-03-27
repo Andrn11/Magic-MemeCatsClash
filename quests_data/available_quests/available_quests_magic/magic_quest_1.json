@@ -1,0 +1,11 @@
+{
+    "id": "magic_quest_1",
+    "type": "magic",
+    "title": "Имя: Начинающий маг",
+    "description": "Получите 2 магические карты",
+    "target": 2,
+    "reward": {
+        "magic_coins": 300,
+        "points": 1500
+    }
+}

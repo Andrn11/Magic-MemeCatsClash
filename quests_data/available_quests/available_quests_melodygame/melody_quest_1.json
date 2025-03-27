@@ -1,0 +1,11 @@
+{
+    "id": "melody_quest_1",
+    "type": "melody",
+    "title": "Имя: Знаток мемов",
+    "description": "Правильно угадайте 1 мелодию из игры",
+    "target": 1,
+    "reward": {
+        "note_coins": 200,
+        "points": 1000
+    }
+}

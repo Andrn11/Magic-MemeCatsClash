@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ошибка входа</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="message-container">
+        <h1>❌ Ошибка входа</h1>
+        <p id="error-message">{{ error_message }}</p>
+        <a href="/">Попробовать снова</a>
+    </div>
+
+    <script>
+        // Получаем сообщение об ошибке из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('error-message').textContent =
+            decodeURIComponent(urlParams.get('message') || 'Неизвестная ошибка');
+    </script>
+</body>
+</html>

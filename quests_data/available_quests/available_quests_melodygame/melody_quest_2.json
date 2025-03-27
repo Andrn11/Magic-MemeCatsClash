@@ -1,0 +1,11 @@
+{
+    "id": "melody_quest_2",
+    "type": "melody",
+    "title": "Имя: Мемология",
+    "description": "Правильно угадайте 3 мелодии из игры",
+    "target": 3,
+    "reward": {
+        "note_coins": 600,
+        "points": 3000
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .home-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .feature-title {
+            color: #4a76a8;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1 class="header-title">Главная страница</h1>
+            <div class="nav-links">
+                <a href="/user_collection/{{ session['user_id'] }}">Моя коллекция</a>
+                <a href="/search_user">Поиск пользователей</a>
+                <a href="/logout">Выйти</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-container">
+        <h2>Добро пожаловать, {{ username }}!</h2>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3 class="feature-title">Моя коллекция</h3>
+                <p>Просматривайте и управляйте своей коллекцией карточек</p>
+                <a href="/user_collection/{{ session['user_id'] }}" class="view-button">Перейти</a>
+            </div>
+
+            <div class="feature-card">
+                <h3 class="feature-title">Поиск пользователей</h3>
+                <p>Найдите других пользователей и посмотрите их коллекции</p>
+                <a href="/search_user" class="view-button">Перейти</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "id": "cat_quest_1",
+    "type": "cat",
+    "title": "Имя: Коллекционер котов",
+    "description": "Получите 3 карточки кота любого типа",
+    "target": 3,
+    "reward": {
+        "cat_coins": 500,
+        "points": 1000
+    }
+}

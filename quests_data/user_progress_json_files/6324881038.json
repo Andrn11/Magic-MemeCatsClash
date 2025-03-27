@@ -1,0 +1,9 @@
+{
+  "active_quest": "magic_quest_2",
+  "category": "magic",
+  "progress": 0,
+  "completed": false,
+  "last_update": "2025-03-27",
+  "reward_claimed": false,
+  "quest_file": "magic_quest_2.json"
+}

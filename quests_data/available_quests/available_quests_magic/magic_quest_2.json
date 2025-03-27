@@ -1,0 +1,11 @@
+{
+    "id": "magic_quest_2",
+    "type": "magic",
+    "title": "Имя: Магический коллекционер",
+    "description": "Получите 5 магических карт",
+    "target": 5,
+    "reward": {
+        "magic_coins": 800,
+        "points": 4000
+    }
+}

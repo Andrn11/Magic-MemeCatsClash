@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты поиска</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .results-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .results-title {
+            text-align: center;
+            color: #4a76a8;
+            margin-bottom: 20px;
+        }
+
+        .users-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .user-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-item:last-child {
+            border-bottom: none;
+        }
+
+        .user-info {
+            font-size: 16px;
+        }
+
+        .user-id {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .view-button {
+            padding: 5px 10px;
+            background-color: #4a76a8;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .view-button:hover {
+            background-color: #3a5f8a;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #4a76a8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="results-container">
+        <h2 class="results-title">Результаты поиска</h2>
+
+        {% if users %}
+        <ul class="users-list">
+            {% for user in users %}
+            <li class="user-item">
+                <div class="user-info">
+                    {{ user['username'] }}
+                    <span class="user-id">(ID: {{ user['user_id'] }})</span>
+                </div>
+                <a href="/user_collection/{{ user['user_id'] }}" class="view-button">Просмотреть коллекцию</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <div class="no-results">
+            Пользователи не найдены
+        </div>
+        {% endif %}
+
+        <a href="/search_user" class="back-link">Новый поиск</a>
+        <a href="/home" class="back-link">Вернуться на главную</a>
+    </div>
+</body>
+</html>
